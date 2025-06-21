@@ -8,8 +8,8 @@ import Talent from '../../assets/Images/talent.png';
 import Ecommerce from '../../assets/Images/ecommerce.png';
 import Connect from '../../assets/Images/connect.png';
 
-import TalentIcon from '../../assets/Icons/Talent.svg';
-import RemoteIcon from '../../assets/Icons/Remote.svg';
+import TalentIcon from '../../assets/Icons/talent.svg';
+import RemoteIcon from '../../assets/Icons/remote.svg';
 import ViewBack from '../../assets/Images/viewback.svg';
 
 import JobIcon from '../../assets/Icons/job.svg';

@@ -31,11 +31,13 @@ const Footer = () => {
                         width={'100%'}
                         justify={'space-between'}
                         align={'flex-start'}
+                        invert={'column'}
                     >
                         <FlexedWrapper
                             width={'50%'}
                             justify={'space-between'}
                             align={'flex-start'}
+                            smallWidth={'100%'}
                         >
                             <FlexedWrapper
                                 direction={'column'}
@@ -47,8 +49,10 @@ const Footer = () => {
                             >
                                 {["About", "As a Freelancer", "As an Employeer", "Privacy Policy", "Terms of Service"].map((val, index) =>
                                     <CustomText
+                                        key={index.toString()}
                                         opacity={0.5}
                                         size={'1.2rem'}
+                                        small={'0.8rem'}
                                     >
                                         {val}
                                     </CustomText>
@@ -67,6 +71,7 @@ const Footer = () => {
                                     <CustomText
                                         opacity={0.5}
                                         size={'1.2rem'}
+                                        small={'0.8rem'}
                                     >
                                         {val}
                                     </CustomText>

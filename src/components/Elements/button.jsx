@@ -12,13 +12,14 @@ cursor: pointer;
 padding: ${(props) => props.padding ? props.padding : "5px 10px 5px 10px"};
 text-align: center;
 height: fit-content;
+
 `;
 
 export const PrimaryButton = ({ bgColor, color, text, border, onClick }) => {
     return (
         <>
             <ButtonWrapper bgColor={bgColor} border={border} onClick={onClick}>
-                <CustomText color={color}>{text}</CustomText>
+                <CustomText color={color} small={'0.8rem'}>{text}</CustomText>
             </ButtonWrapper>
         </>
     )

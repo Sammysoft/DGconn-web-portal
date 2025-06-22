@@ -36,18 +36,27 @@ padding: 5vh 0px 5vh 0px;
 `;
 
 const ImageBackground = styled.div`
-width: 100%;
-border-radius: 20px;
-height: 90vh;
-background-image: url(${ViewBack});
-background-repeat: no-repeat;
-background-position: contain;
-background-size: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
+  width: 100%;
+  border-radius: 20px;
+  height: 90vh;
+  background-image: url(${ViewBack});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (max-width: 1040px) {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    margin: 5vh 0px 5vh 0px
+  }
 `;
+
 
 
 const ItemListingWrapper = styled.div`
@@ -56,6 +65,9 @@ border-radius: 20px;
 box-shadow: 0px 9px 15px 0px #484848A1;
 width: 100%;
 height: fit-content;
+
+
+
 `;
 
 
@@ -112,13 +124,13 @@ const Discover = () => {
         <>
             <DiscoverWrapper>
                 <FlexedWrapper direction={'column'} justify={'flex-start'} align={'flex-start'}>
-                    <CustomText bold size={'2.5rem'}>
+                    <CustomText bold size={'2.5rem'} small={'1.5rem'}>
                         Discover Opportunities
                     </CustomText>
-                    <CustomText weight={500} size={'2rem'} opacity={0.3}>
+                    <CustomText weight={500} size={'2rem'} small={'1.2rem'} opacity={0.3}>
                         that inspire
                     </CustomText>
-                    <CustomText size={'1rem'} width={'40%'} weight={100} >
+                    <CustomText size={'1rem'} width={'40%'} small={'0.7rem'} weight={100} >
                         Our intuitive platform connects skilled job seekers with top employers.
                         Whether you're aiming to launch your career, make a pivotal change,
                         or discover that extraordinary opportunity.
@@ -126,33 +138,49 @@ const Discover = () => {
                 </FlexedWrapper>
                 <DiscoverCards />
 
-                <FlexedWrapper justify={'space-between'} align={'space-between'} height={'20vh'}>
+                <FlexedWrapper invert={'column'}
+                    justify={'space-between'}
+                    align={'space-between'}
+                    height={'20vh'}
+                    smallHeight={'fit-content'}
+                >
                     <FlexedWrapper
                         direction={'column'}
                         width={'60%'}
+                        smallWidth={'100%'}
                         justify={'flex-start'}
                         align={'flex-start'}>
-                        <CustomText bold size={'2.5rem'}>
+                        <CustomText bold size={'2.5rem'} small={'1.5rem'}>
                             Discover Opportunities
                         </CustomText>
                         <CustomText weight={500} size={'2rem'} opacity={0.3}>
                             that inspire
                         </CustomText>
-                        <CustomText size={'1rem'} width={'70%'} weight={100} >
+                        <CustomText size={'1rem'} width={'70%'} small={'0.7rem'} weight={100} >
                             Our intuitive platform connects skilled job seekers with top employers.
                             Whether you're aiming to launch your career, make a pivotal change,
                             or discover that extraordinary opportunity.
                         </CustomText>
                     </FlexedWrapper>
-                    <FlexedWrapper direction={'column'} justify={"space-between"} align={'flex-start'} width={'40%'} height={'100%'}>
-                        <FlexedWrapper justify={'space-between'} width={'100%'} align={'space-between'}>
-                            <StyledImage img={RemoteIcon} size={'40px'} />
+                    <FlexedWrapper direction={'column'}
+                        justify={"space-between"} align={'flex-start'}
+                        width={'40%'}
+                        height={'100%'}
+                        smallWidth={'100%'}
+                    >
+                        <FlexedWrapper justify={'space-between'}
+                            width={'100%'}
+                            align={'space-between'}
+                        >
+                            <StyledImage img={RemoteIcon}
+                                size={'40px'} small={'30px'}
+                            />
                             <FlexedWrapper
                                 direction={'column'}
                                 justify={'flex-start'}
                                 width={'85%'}
                                 align={'flex-start'}>
-                                <CustomText bold size={'1.2rem'}>Work Globally</CustomText>
+                                <CustomText bold size={'1.2rem'} small={'0.8rem'}>Work Globally</CustomText>
                                 <CustomText normal size={'0.8rem'}>
                                     Work Remotely across 100+ continents, get paid in your desired currency
                                     by doing what you love doing best.
@@ -160,13 +188,13 @@ const Discover = () => {
                             </FlexedWrapper>
                         </FlexedWrapper>
                         <FlexedWrapper justify={'space-between'} width={'100%'} align={'space-between'}>
-                            <StyledImage img={TalentIcon} size={'40px'} />
+                            <StyledImage img={TalentIcon} size={'40px'} small={'30px'} />
                             <FlexedWrapper
                                 direction={'column'}
                                 justify={'flex-start'}
                                 width={'85%'}
                                 align={'flex-start'}>
-                                <CustomText bold size={'1.2rem'}>Work Globally</CustomText>
+                                <CustomText bold size={'1.2rem'} small={'0.8rem'}>Work Globally</CustomText>
                                 <CustomText normal size={'0.8rem'}>
                                     Work Remotely across 100+ continents, get paid in your desired currency
                                     by doing what you love doing best.
@@ -179,14 +207,20 @@ const Discover = () => {
                 <ImageBackground>
                     <FlexedWrapper
                         height={'80%'}
+                        smallHeight={'90%'}
                         width={'70%'}
+                        smallWidth={'90%'}
                         justify={'space-evenly'}
+                        invert={'column'}
                     >
                         <FlexedWrapper
                             direction={'column'}
                             height={'70%'}
+                            smallHeight={'45%'}
                             justify={'space-evenly'}
-                            width={'45%'}
+                            width={'50%'}
+                            smallWidth={'90%'}
+
                         >
                             <ItemListingWrapper>
                                 <FlexedWrapper
@@ -194,8 +228,8 @@ const Discover = () => {
                                     padding={'15px 10px 5px 10px'}
                                     height={'fit-content'}
                                 >
-                                    <StyledImage img={JobIcon} size={'30px'} />
-                                    <CustomText width={'90%'}>Job</CustomText>
+                                    <StyledImage img={JobIcon} size={'30px'} small={'25px'} />
+                                    <CustomText width={'90%'} smallWidth={'85%'}>Job</CustomText>
                                 </FlexedWrapper>
                                 <Divider />
 
@@ -207,13 +241,13 @@ const Discover = () => {
                                         justify={'space-between'}
                                         padding={'2.5%'}
                                     >
-                                        <StyledImage size={'40px'} img={val.icon} />
+                                        <StyledImage size={'40px'} img={val.icon} small={'30px'} />
                                         <FlexedWrapper
                                             width={'70%'}
                                             direction={'column'}
                                             justify={'center'}
                                             align={'flex-start'}>
-                                            <CustomText size={'1.2rem'}>{val.name}</CustomText>
+                                            <CustomText size={'1.2rem'} small={'0.8rem'}>{val.name}</CustomText>
                                             <CustomText
                                                 opacity={0.4}
                                                 width="fit-content"
@@ -234,17 +268,19 @@ const Discover = () => {
                         <FlexedWrapper
                             direction={'column'}
                             height={'100%'}
+                            smallHeight={'35%'}
                             justify={'flex-end'}
                             align={'flex-end'}
                             width={'45%'}
+                            smallWidth={'90%'}
                         >
                             <ItemListingWrapper>
                                 <FlexedWrapper justify={'space-between'}
                                     padding={'15px 10px 5px 10px'}
                                     height={'fit-content'} >
-                                    <StyledImage img={UserIcon} size={'30px'} />
-                                    <CustomText width={'65%'}>Freelancer</CustomText>
-                                    <CustomText normal width={'20%'}>Filter</CustomText>
+                                    <StyledImage img={UserIcon} size={'30px'} small={'20px'} />
+                                    <CustomText width={'65%'} smallWidth={'65%'}>Freelancer</CustomText>
+                                    <CustomText normal width={'20%'} smallWidth={'20%'}>Filter</CustomText>
                                 </FlexedWrapper>
 
                                 <Divider />
@@ -257,17 +293,18 @@ const Discover = () => {
                                         justify={'space-between'}
                                         padding={'2.5%'}
                                     >
-                                        <StyledImage size={'40px'} img={person.icon} />
+                                        <StyledImage size={'40px'} img={person.icon} small={'30px'} />
                                         <FlexedWrapper
                                             width={'70%'}
                                             direction={'column'}
                                             justify={'center'}
                                             align={'flex-start'}>
-                                            <CustomText size={'1.2rem'}>{person.name}</CustomText>
+                                            <CustomText size={'1.2rem'} small={'0.8rem'}>{person.name}</CustomText>
                                             <CustomText
                                                 opacity={0.4}
                                                 width="fit-content"
                                                 normal
+                                                small={'0.7rem'}
                                             >
                                                 {person.role}
                                             </CustomText>
@@ -293,6 +330,13 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 gap: 3%;
+
+@media (max-width: 1040px){
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
 `;
 
 const Card = styled.div`
@@ -302,6 +346,12 @@ background-color: ${Colors.GREY.NORMAL};
 height: 50vh;
 position: relative;
 border: 1px solid #A9A6A652;
+
+
+@media (max-width: 1040px){
+width: 100%;
+margin: 2vh 0px 2vh 0px;
+}
 `;
 
 const CardDisplayImage = styled.div`
@@ -355,18 +405,24 @@ const DiscoverCards = () => {
                             padding={"15px"}>
                             <CustomText
                                 size={'1rem'}
+                                small={'0.7rem'}
                                 normal
                                 style={{ textTransform: "uppercase" }}
                             >
                                 {item.title}
                             </CustomText>
-                            <CustomText bold size={'1.5rem'} width={'75%'}>
+                            <CustomText bold
+                                size={'1.5rem'}
+                                small={'1rem'} width={'75%'}
+                                smallWidth={'75%'} >
                                 {item.head}
                             </CustomText>
                             <CustomText normal
                                 size={'1rem'}
                                 opacity={0.4}
-                                width={'90%'}>
+                                width={'90%'}
+                                smallWidth={'90%'}
+                            >
                                 {item.body}
                             </CustomText>
                         </FlexedWrapper>

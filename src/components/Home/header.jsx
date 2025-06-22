@@ -31,44 +31,54 @@ const Header = () => {
                     height={'100%'}
                 >
                     <FlexedWrapper height={'fit-content'}>
-                        <CustomText size={'3.5rem'} bold>Search </CustomText>
-                        <LottieImage loop={true} size={'100px'} img={SearchLottie} />
-                        <CustomText size={'3.5rem'} bold>, Connect</CustomText>
-                        <LottieImage loop={true} size={'100px'} img={MapLottie} />
+                        <CustomText size={'3.5rem'} small={'2rem'} bold>Search </CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'60px'} img={SearchLottie} />
+                        <CustomText size={'3.5rem'} small={'2rem'} bold>, Connect</CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'60px'} img={MapLottie} />
                     </FlexedWrapper>
                     <FlexedWrapper height={'fit-content'}>
-                        <CustomText size={'3.5rem'} bold>Earn</CustomText>
-                        <LottieImage loop={true} size={'100px'} img={MoneyLottie} />
+                        <CustomText size={'3.5rem'} small={'2rem'} bold>Earn</CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'60px'} img={MoneyLottie} />
                     </FlexedWrapper>
-                    <CustomText width={'45%'} normal opacity={0.5}>Our intuitive platform connects skilled job seekers with top employers. Whether you're
+                    <CustomText width={'45%'} smallWidth={'90%'}
+                        normal opacity={0.5}>
+                        Our intuitive platform connects skilled job seekers with top employers. Whether you're
                         aiming to launch your career, make a pivotal change, or discover that extraordinary opportunity.
                     </CustomText>
                     <br />
                     <FlexedWrapper height={'fit-content'}>
-                        <StyledImage size={'20px'} img={Avatar1} />
-                        <StyledImage size={'20px'} img={Avatar2} />
-                        <StyledImage size={'20px'} img={Avatar3} />
+                        <StyledImage size={'20px'} small={'20px'} img={Avatar1} />
+                        <StyledImage size={'20px'} small={'20px'} img={Avatar2} />
+                        <StyledImage size={'20px'} small={'20px'} img={Avatar3} />
                         <CustomText opacity={0.5} size={'0.7rem'} weight={400}>2.3K</CustomText>
                         <CustomText opacity={0.5} size={'0.6rem'}>Employees, companies</CustomText>
                     </FlexedWrapper>
                     <br />
-                    <FlexedWrapper height={'fit-content'} justify={'space-evenly'} width={'20%'}>
+                    <ResponsiveBox height={'fit-content'} justify={'space-evenly'} width={'20%'}>
                         <ShadowButton text={'Join Now'} />
                         <IconButton
                             width={'fit-content'}
                             item={
                                 <FlexedWrapper width={'fit-content'}>
                                     <CustomText color='#FFFFFF' weight={'bold'}>Download App</CustomText>
-                                    <StyledImage img={PlayStoreIcon} size={'15px'} />
-                                    <StyledImage img={AppStoreIcon} size={'15px'} />
-                                </FlexedWrapper>}
+                                    <StyledImage img={PlayStoreIcon} size={'15px'} small={'15px'} />
+                                    <StyledImage img={AppStoreIcon} size={'15px'} small={'15px'} />
+                                </FlexedWrapper>
+                            }
                         />
-                    </FlexedWrapper>
+                    </ResponsiveBox>
                 </FlexedWrapper>
 
             </HeaderWrapper>
         </>
     )
 }
+
+const ResponsiveBox = styled(FlexedWrapper)`
+
+@media (max-width: 1040px){
+width: 80%;
+}
+`;
 
 export default Header

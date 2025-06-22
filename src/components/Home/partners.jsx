@@ -14,6 +14,11 @@ const PartnersWrapper = styled.div`
     width: 100%;
 `;
 
+const Wrapper = styled(FlexedWrapper)`
+
+overflow-x: scroll;
+`
+
 const Partners = () => {
     return (
         <>
@@ -22,14 +27,14 @@ const Partners = () => {
                     <CustomText opacity={0.4} size={'1rem'} >
                         Trusted by world best organizations
                     </CustomText>
-                    <FlexedWrapper justify={'space-evenly'} align={'center'}>
+                    <Wrapper justify={'space-evenly'} align={'center'}>
                         <StyledImage size={'130px'} img={Cowry} />
                         <StyledImage size={'130px'} img={Cravings} />
                         <StyledImage size={'130px'} img={Flutterwave} />
-                        <StyledImage size={'130px'} img={DDesigner} />
-                        <StyledImage size={'70px'} img={Eden} />
+                        <StyledImage size={'130px'} small={'100px'} img={DDesigner} />
+                        <StyledImage size={'70px'} small={'70px'} img={Eden} />
                         <StyledImage size={'130px'} img={GigaLayer} />
-                    </FlexedWrapper>
+                    </Wrapper>
                 </FlexedWrapper>
             </PartnersWrapper>
         </>

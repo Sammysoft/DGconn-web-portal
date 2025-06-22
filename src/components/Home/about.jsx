@@ -20,6 +20,11 @@ display: flex;
 flex-wrap: wrap;
 gap: 1%;
 margin: 5vh 0px 5vh 0px;
+
+
+@media (max-width: 1040px){
+flex-direction: column;
+}
 `;
 
 
@@ -32,6 +37,12 @@ background-position: contain;
 background-repeat: no-repeat;
 background-size: 100%;
 position: relative;
+
+@media (max-width: 1040px){
+background-size: cover;
+width: 100%;
+margin: 2vh 0px 2vh 0px;
+}
 `;
 
 const ProjectWrapper = styled.div`
@@ -42,6 +53,11 @@ background-repeat: no-repeat;
 width: 100%;
 height: 60vh;
 margin: 10vh 0px 5vh 0px;
+
+@media (max-width: 1040px){
+background-size: cover;
+background-position: center;
+}
 `;
 
 
@@ -85,10 +101,10 @@ const About = () => {
     return (
         <>
             <Wrapper>
-                <CustomText bold size={'2.5rem'}>
+                <CustomText bold size={'2.5rem'} small={'2rem'}>
                     Why Choose Us?
                 </CustomText>
-                <CustomText opacity={0.5} size={'1rem'} width={'35%'}>
+                <CustomText opacity={0.5} size={'1rem'} width={'35%'} smallWidth={'90%'} small={'1rem'}>
                     Why thousands trust DD CONN as their go to platform for sourcing
                     talented freelancer?
                 </CustomText>
@@ -98,6 +114,7 @@ const About = () => {
                         <FlexedWrapper
                             key={idx.toString()}
                             width={'30%'}
+                            smallWidth={'100%'}
                             direction={'column'}
                             height={'20vh'}
                             justify={'space-evenly'}
@@ -134,7 +151,7 @@ const About = () => {
                     )}
                 </AboutWriteGrid>
 
-                <CustomText width={'45%'} opacity={0.5} >
+                <CustomText width={'45%'} smallWidth={'100%'} opacity={0.5} >
                     Trusted by Clients and Freelancers Worldwide, with over 230 thousands clients
                     and freelancer, we have been able to meet up to their standards from hiring to
                     freelancing. Trusted by our clients, and you can be among the loyal clients.
@@ -146,7 +163,6 @@ const About = () => {
                         height={'100%'}
                         direction={'column'}
                         align={'center'}
-                        // justify={'space-evenly'}
                     >
                         <CustomText
                             bold
@@ -161,6 +177,7 @@ const About = () => {
                         <FlexedWrapper
                             height={'fit-content'}
                             width={'20%'}
+                            smallWidth={'70%'}
                             justify={'space-evenly'}>
                             <PrimaryButton
                                 bgColor={'#FFFFFF'}

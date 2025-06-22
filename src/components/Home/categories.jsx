@@ -25,6 +25,10 @@ display: flex;
 flex-wrap: wrap;
 height: fit-content;
 gap: 1%;
+
+@media (max-width: 1040px){
+flex-direction: column;
+}
 `;
 
 const CardItem = styled.div`
@@ -35,6 +39,10 @@ height: 25vh;
 margin: 2vh 0px 0px 0px;
 padding: 15px 10px 15px 10px;
 cursor: pointer;
+
+@media (max-width: 1040px){
+width: 100%;
+}
 `;
 
 const LearnMoreBtn = styled.div`
@@ -106,12 +114,13 @@ const Categories = () => {
         <>
             <Wrapper>
                 <FlexedWrapper justify={'flex-start'}>
-                    <CustomText bold size={'2.5rem'}>
+                    <CustomText bold size={'2.5rem'} small={'1.5rem'}>
                         Popular
                     </CustomText>
                     <CustomText
                         opacity={0.5}
                         size={'2.5rem'}
+                        small={'1.5rem'}
                         weight={700}
                     >
                         {" "}Categories</CustomText>
@@ -129,7 +138,7 @@ const Categories = () => {
                                 justify={'space-between'}
                                 align={'flex-start'}
                             >
-                                <StyledImage size={'30px'} img={cat.icon} />
+                                <StyledImage size={'30px'} img={cat.icon} small={'40px'} />
                                 <FlexedWrapper
                                     direction={'column'}
                                     width={'85%'}
@@ -139,11 +148,13 @@ const Categories = () => {
                                     <CustomText
                                         weight={500}
                                         size={'1.7rem'}
+                                        small={'1.5rem'}
                                         width={"90%"}>
                                         {cat.title}
                                     </CustomText>
                                     <CustomText
                                         size={'1.2rem'}
+                                        small={'0.8rem'}
                                         weight={300}
                                         width={'95%'}
                                         opacity={0.5}
@@ -160,6 +171,7 @@ const Categories = () => {
                                         <LearnMoreBtn>Learn More</LearnMoreBtn>
                                         <StyledImage
                                             size={'20px'}
+                                            small={'20px'}
                                             img={UpwardIcon}
                                         />
                                     </FlexedWrapper>

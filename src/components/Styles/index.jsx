@@ -9,7 +9,14 @@ flex-direction: ${(props) => props.direction ? props.direction : 'row'};
 align-items: ${(props) => props.align ? props.align : "center"};
 justify-content: ${(props) => props.justify ? props.justify : "center"};
 height: ${(props) => props.height ? props.height : "100%"};
-padding: ${(props)=> props.padding ? props.padding : ""};
+padding: ${(props) => props.padding ? props.padding : ""};
+
+
+@media (max-width: 1040px){
+flex-direction: ${(props) => props.invert ? props.invert : ""};
+width: ${(props) => props.smallWidth ? props.smallWidth : ""};
+height: ${(props) => props.smallHeight ? props.smallHeight : ""};
+};
 `;
 
 export const CustomText = styled.div`
@@ -19,6 +26,12 @@ export const CustomText = styled.div`
  width: ${(props) => props.width ? props.width : "fit-content"};
  color: ${(props) => props.color ? props.color : ""};
  padding: 2px;
+
+
+ @media (max-width: 1040px){
+  font-size: ${(props) => props.normal ? '0.7rem' : props.small};
+   width: ${(props) => props.smallWidth ? props.smallWidth : "fit-content"};
+ }
 `;
 
 

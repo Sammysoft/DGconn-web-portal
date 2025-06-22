@@ -31,14 +31,14 @@ const Header = () => {
                     height={'100%'}
                 >
                     <FlexedWrapper height={'fit-content'}>
-                        <CustomText size={'3.5rem'} small={'2rem'} bold>Search </CustomText>
-                        <LottieImage loop={true} size={'100px'} small={'60px'} img={SearchLottie} />
-                        <CustomText size={'3.5rem'} small={'2rem'} bold>, Connect</CustomText>
-                        <LottieImage loop={true} size={'100px'} small={'60px'} img={MapLottie} />
+                        <CustomText size={'3.5rem'} small={'1.7rem'} bold>Search </CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'50px'} img={SearchLottie} />
+                        <CustomText size={'3.5rem'} small={'1.7rem'} bold>, Connect</CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'50px'} img={MapLottie} />
                     </FlexedWrapper>
                     <FlexedWrapper height={'fit-content'}>
-                        <CustomText size={'3.5rem'} small={'2rem'} bold>Earn</CustomText>
-                        <LottieImage loop={true} size={'100px'} small={'60px'} img={MoneyLottie} />
+                        <CustomText size={'3.5rem'} small={'1.7rem'} bold>Earn</CustomText>
+                        <LottieImage loop={true} size={'100px'} small={'50px'} img={MoneyLottie} />
                     </FlexedWrapper>
                     <CustomText width={'45%'} smallWidth={'90%'}
                         normal opacity={0.5}>

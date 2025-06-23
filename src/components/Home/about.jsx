@@ -178,7 +178,7 @@ const About = () => {
                         <FlexedWrapper
                             height={'fit-content'}
                             width={'25%'}
-                            smallWidth={'70%'}
+                            smallWidth={'80%'}
                             justify={'space-evenly'}>
                             <PrimaryButton
                                 bgColor={'transparent'}

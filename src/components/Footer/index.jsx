@@ -52,6 +52,7 @@ const Footer = () => {
                                 size={'2.5rem'}
                                 width={'70%'}
                                 smallWidth={'100%'}
+                                small={'1.5rem'}
                                 color={'#FFFFFF'}
                                 padding={'0px 0px 20px 0px'}
                             >
@@ -77,7 +78,7 @@ const Footer = () => {
                             <CustomText
                                 color={'#ffffff'}
                                 size={'1.5rem'}
-
+                                small={'0.9rem'}
                             >
                                 Stay up to Date
                             </CustomText>

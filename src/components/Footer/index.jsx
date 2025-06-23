@@ -63,6 +63,7 @@ const Footer = () => {
                                 color='#ffffff'
                                 width={'85%'}
                                 smallWidth={'100%'}
+                                small={'0.6rem'}
                             >
                                 Subscribe to get the latest updates, jobs and insights on our platform. Be the first to get updated on every information shared about the platform
                             </CustomText>

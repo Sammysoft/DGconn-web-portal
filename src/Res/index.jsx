@@ -8,5 +8,8 @@ export const Colors = {
     },
     GREY:{
         NORMAL:"#F4F4F47D"
+    },
+    BLUE:{
+        DEEP:"#1A4BC1"
     }
 }

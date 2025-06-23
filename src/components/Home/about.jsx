@@ -136,8 +136,9 @@ const About = () => {
                     )}
                 </AboutWriteGrid>
 
-                <CustomText bold size={'2.5rem'}>
-                    Why Choose Us?
+                <CustomText bold size={'2rem'}>
+                    Don't take our words for it!<br />
+                    Here it from our patners.
                 </CustomText>
 
                 <AboutWriteGrid>
@@ -169,25 +170,26 @@ const About = () => {
                             color={'#ffffff'}
                             width={'35%'}
                             size={'3.5rem'}
-                            style={{ textAlign: "center", marginBottom:'20px' }}
+                            style={{ textAlign: "center", marginBottom: '20px' }}
                         >
                             Ready to Start Your
                             Next Project
                         </CustomText>
                         <FlexedWrapper
                             height={'fit-content'}
-                            width={'20%'}
+                            width={'25%'}
                             smallWidth={'70%'}
                             justify={'space-evenly'}>
                             <PrimaryButton
-                                bgColor={'#FFFFFF'}
-                                color={'#000000'}
+                                bgColor={'transparent'}
+                                color={'#FFFFFF'}
+                                borderColor={'#FFFFFF'}
                                 text={'Post a Job'}
                             />
 
                             <PrimaryButton
-                                bgColor={'#000000'}
-                                color={'#FFFFFF'}
+                                bgColor={'#FFFFFF'}
+                                color={'#000000'}
                                 text={'Join as a Freelancer'}
                             />
                         </FlexedWrapper>

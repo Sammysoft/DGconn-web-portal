@@ -147,13 +147,13 @@ const Categories = () => {
                                 >
                                     <CustomText
                                         weight={500}
-                                        size={'1.7rem'}
+                                        size={'1.3rem'}
                                         small={'1.5rem'}
-                                        width={"90%"}>
+                                        width={"95%"}>
                                         {cat.title}
                                     </CustomText>
                                     <CustomText
-                                        size={'1.2rem'}
+                                        size={'1rem'}
                                         small={'0.8rem'}
                                         weight={300}
                                         width={'95%'}
@@ -163,7 +163,7 @@ const Categories = () => {
                                     </CustomText>
 
                                     <FlexedWrapper
-                                        width={'40%'}
+                                        width={'45%'}
                                         height={'fit-content'}
                                         align={'flex-start'}
                                         justify={'flex-start'}

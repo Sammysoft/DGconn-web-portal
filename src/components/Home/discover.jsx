@@ -412,13 +412,13 @@ const DiscoverCards = () => {
                                 {item.title}
                             </CustomText>
                             <CustomText bold
-                                size={'1.5rem'}
-                                small={'1rem'} width={'75%'}
+                                size={'1.2rem'}
+                                small={'0.8rem'} width={'75%'}
                                 smallWidth={'75%'} >
                                 {item.head}
                             </CustomText>
                             <CustomText normal
-                                size={'1rem'}
+                                size={'0.6rem'}
                                 opacity={0.4}
                                 width={'90%'}
                                 smallWidth={'90%'}

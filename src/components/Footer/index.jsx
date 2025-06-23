@@ -1,24 +1,33 @@
-import React from 'react';
+
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
 
-import SecondaryLogo from '../../assets/Images/secondary-logo.svg';
+import FootLogo from '../../assets/Icons/foot-logo.svg';
 import { CustomText, FlexedWrapper } from '../Styles';
+import { Colors } from '../../Res';
+import Input from '../Elements/input';
+import { PrimaryButton } from '../Elements/button';
 
 const Wrapper = styled.div`
 width: 100%;
-border-top: 1px solid #000000;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 `;
 
-const ContentWrapper = styled.div`
+
+const SubscribeWrapper = styled.div`
 width: 90%;
-height: 100%;
-border-right: 1px solid #000000;
-border-left: 1px solid #000000;
+border-radius: 20px;
+background-color: ${Colors.BLUE.DEEP};
+padding: 15px;
+margin: 5%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 40vh;
 `
 
 
@@ -26,61 +35,155 @@ const Footer = () => {
     return (
         <>
             <Wrapper>
-                <ContentWrapper>
+                <SubscribeWrapper>
                     <FlexedWrapper
-                        width={'100%'}
-                        justify={'space-between'}
-                        align={'flex-start'}
+                        height={'fit-content'}
                         invert={'column'}
+                        align={'space-evenly'}
+                        justify={'space-evenly'}
                     >
                         <FlexedWrapper
-                            width={'50%'}
-                            justify={'space-between'}
+                            width={'45%'}
+                            direction={'column'}
                             align={'flex-start'}
                             smallWidth={'100%'}
                         >
-                            <FlexedWrapper
-                                direction={'column'}
-                                width={'50%'}
-                                height={'20vh'}
-                                justify={'space-between'}
-                                align={'space-between'}
-                                padding={'30px 10px 30px 10vw'}
+                            <CustomText
+                                size={'2.5rem'}
+                                width={'70%'}
+                                smallWidth={'100%'}
+                                color={'#FFFFFF'}
+                                padding={'0px 0px 20px 0px'}
                             >
-                                {["About", "As a Freelancer", "As an Employeer", "Privacy Policy", "Terms of Service"].map((val, index) =>
-                                    <CustomText
-                                        key={index.toString()}
-                                        opacity={0.5}
-                                        size={'1.2rem'}
-                                        small={'0.8rem'}
-                                    >
-                                        {val}
-                                    </CustomText>
-                                )}
-                            </FlexedWrapper>
+                                Subscribe to our Newsletter
+                            </CustomText>
+                            <CustomText
+                                opacity={0.5}
+                                color='#ffffff'
+                                width={'85%'}
+                                smallWidth={'100%'}
+                            >
+                                Subscribe to get the latest updates, jobs and insights on our platform. Be the first to get updated on every information shared about the platform
+                            </CustomText>
+                        </FlexedWrapper>
 
-                            <FlexedWrapper
-                                direction={'column'}
-                                width={'50%'}
-                                height={'20vh'}
-                                justify={'space-between'}
-                                align={'space-between'}
-                                padding={'30px 10px 30px 10vw'}
+                        <FlexedWrapper
+                            width={'45%'}
+                            direction={'column'}
+                            align={'flex-start'}
+
+                            smallWidth={'100%'}
+                        >
+                            <CustomText
+                                color={'#ffffff'}
+                                size={'1.5rem'}
+
                             >
-                                {["Contact Service", "Linked In", "Twitter", "Facebook", "Instagram"].map((val, index) =>
-                                    <CustomText
-                                        opacity={0.5}
-                                        size={'1.2rem'}
-                                        small={'0.8rem'}
-                                    >
-                                        {val}
-                                    </CustomText>
-                                )}
+                                Stay up to Date
+                            </CustomText>
+                            <FlexedWrapper
+                                width={'80%'}
+                                height={'fit-content'}
+                                justify={'flex-start'}
+                                align={'space-between'}
+                                padding={'20px 0px 20px 0px'}
+                            >
+                                <Input
+                                    width={'50%'}
+                                    placeholder={'Enter email address.. '}
+                                    bgcolor={"#F8F8F82E"}
+                                    color={'#ffffff'}
+                                />
+
+                                <PrimaryButton
+                                    width={'fit-content'}
+                                    text={'Subscribe'}
+                                    bgColor={'#ffffff'}
+                                    padding={'10px'}
+                                    color={'#000000'}
+                                />
                             </FlexedWrapper>
                         </FlexedWrapper>
                     </FlexedWrapper>
-                    <StyledImage size={'100%'} img={SecondaryLogo} />
-                </ContentWrapper>
+                </SubscribeWrapper>
+
+                <FlexedWrapper
+                    width={'90%'}
+                    justify={'flex-start'}
+                    align={'flex-start'}
+                    height={'30vh'}
+                    invert={'column'}
+                >
+                    <FlexedWrapper
+                        direction={'column'}
+                        height={'100%'}
+                        width={'50%'}
+                        justify={'flex-start'}
+                        align={'flex-start'}
+                    >
+                        <StyledImage img={FootLogo} size={'100px'} />
+                    </FlexedWrapper>
+                    <FlexedWrapper justify={'space-between'}>
+                        <FlexedWrapper
+                            direction={'column'}
+                            width={'20%'}
+                            smallWidth={'30%'}
+                            height={'100%'}
+                            justify={'flex-start'}
+                            align={'flex-start'}
+                        >
+                            {["LinkedIn", 'Facebook', 'Instagram', 'Twitter'].map((social, ind) =>
+                                <CustomText
+                                    size={'1.2rem'}
+                                    small={'0.8rem'}
+                                    opacity={0.6} key={ind.toString()}
+                                >
+                                    {social}
+                                </CustomText>
+                            )}
+                        </FlexedWrapper>
+
+
+                        <FlexedWrapper
+                            direction={'column'}
+                            width={'20%'}
+                            smallWidth={'30%'}
+                            height={'100%'}
+                            justify={'flex-start'}
+                            align={'flex-start'}
+                        >
+                            {['About Us', 'As a Freelancer', 'As an Employer'].map((social, ind) =>
+                                <CustomText size={'1.2rem'}
+                                    small={'0.8rem'}
+                                    opacity={0.6}
+                                    key={ind.toString()}
+                                >
+                                    {social}
+                                </CustomText>
+                            )}
+                        </FlexedWrapper>
+
+                        <FlexedWrapper
+                            direction={'column'}
+                            width={'20%'}
+                            smallWidth={'30%'}
+                            height={'100%'}
+                            justify={'flex-start'}
+                            align={'flex-start'}
+                        >
+                            {['Privacy Policy', 'Terms of Service', 'Contact Service'].map((social, ind) =>
+                                <CustomText
+                                    size={'1.2rem'}
+                                    small={'0.8rem'}
+                                    opacity={0.6}
+                                    key={ind.toString()}
+                                >
+                                    {social}
+                                </CustomText>
+                            )}
+                        </FlexedWrapper>
+                    </FlexedWrapper>
+                </FlexedWrapper>
             </Wrapper>
         </>
     )

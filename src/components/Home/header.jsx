@@ -54,15 +54,15 @@ const Header = () => {
                         <CustomText opacity={0.5} size={'0.6rem'}>Employees, companies</CustomText>
                     </FlexedWrapper>
                     <br />
-                    <ResponsiveBox height={'fit-content'} justify={'space-evenly'} width={'20%'}>
+                    <ResponsiveBox height={'fit-content'} justify={'space-evenly'} width={'25%'}>
                         <ShadowButton text={'Join Now'} />
                         <IconButton
                             width={'fit-content'}
                             item={
                                 <FlexedWrapper width={'fit-content'}>
                                     <CustomText color='#FFFFFF' weight={'bold'}>Download App</CustomText>
-                                    <StyledImage img={PlayStoreIcon} size={'15px'} small={'15px'} />
-                                    <StyledImage img={AppStoreIcon} size={'15px'} small={'15px'} />
+                                    <StyledImage img={PlayStoreIcon} size={'13px'} small={'15px'} />
+                                    <StyledImage img={AppStoreIcon} size={'13px'} small={'15px'} />
                                 </FlexedWrapper>
                             }
                         />

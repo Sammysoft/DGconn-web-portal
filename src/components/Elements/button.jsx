@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from 'react';
 import { CustomText } from "../Styles";
 import { Colors } from "../../Res";
 
@@ -12,14 +11,27 @@ cursor: pointer;
 padding: ${(props) => props.padding ? props.padding : "5px 10px 5px 10px"};
 text-align: center;
 height: fit-content;
-
+border: ${(props) => props.borderColor ? `1px solid ${props.borderColor}` : ""};
+width: ${(props) => props.width ? props.width : ""};
+justify-content: center;
 `;
 
-export const PrimaryButton = ({ bgColor, color, text, border, onClick }) => {
+export const PrimaryButton = ({ bgColor, color, text, border, onClick, borderColor, padding, width }) => {
     return (
         <>
-            <ButtonWrapper bgColor={bgColor} border={border} onClick={onClick}>
-                <CustomText color={color} small={'0.8rem'}>{text}</CustomText>
+            <ButtonWrapper
+                bgColor={bgColor}
+                border={border}
+                onClick={onClick}
+                borderColor={borderColor}
+                padding={padding}
+                width={width}
+            >
+                <CustomText color={color}
+                    small={'0.8rem'}
+                >
+                    {text}
+                </CustomText>
             </ButtonWrapper>
         </>
     )

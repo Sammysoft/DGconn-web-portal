@@ -7,6 +7,7 @@ import Discover from '../components/Home/discover';
 import Categories from '../components/Home/categories';
 import About from '../components/Home/about';
 import Footer from '../components/Footer';
+import FAQs from '../components/Home/fag';
 
 const Wrapper = styled.div`
 width: 100%;
@@ -23,6 +24,7 @@ const HomePage = ()=>{
                 <Discover />
                 <Categories />
                 <About />
+                <FAQs />
                 <Footer />
             </Wrapper>
         </>

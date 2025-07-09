@@ -25,7 +25,7 @@ export const CustomText = styled.div`
  font-size: ${(props) => props.normal ? '1rem' : props.size};
  width: ${(props) => props.width ? props.width : "fit-content"};
  color: ${(props) => props.color ? props.color : ""};
- padding: 2px;
+ padding: ${(props) => props.padding ? props.padding : "2px"};
 
 
  @media (max-width: 1040px){

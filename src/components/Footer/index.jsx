@@ -2,11 +2,16 @@
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
 
-import FootLogo from '../../assets/Icons/foot-logo.svg';
+import FootLogo from '../../assets/images/secondary-logo.svg';
 import { CustomText, FlexedWrapper } from '../Styles';
 import { Colors } from '../../Res';
 import Input from '../Elements/input';
 import { PrimaryButton } from '../Elements/button';
+
+import LinkedIn from '../../assets/Icons/linkedin.svg';
+import Facebook from '../../assets/Icons/facebook.svg';
+import Twitter from '../../assets/Icons/twitter.svg';
+import Instagram from '../../assets/Icons/instagram.svg';
 
 const Wrapper = styled.div`
 width: 100%;
@@ -28,7 +33,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 40vh;
-`
+`;
 
 
 const Footer = () => {
@@ -118,14 +123,16 @@ const Footer = () => {
                 >
                     <FlexedWrapper
                         direction={'column'}
-                        height={'100%'}
+                        height={'fit-content'}
                         width={'50%'}
                         justify={'flex-start'}
                         align={'flex-start'}
                     >
-                        <StyledImage img={FootLogo} size={'100px'} />
+                        <StyledImage img={FootLogo} size={'200px'} />
                     </FlexedWrapper>
-                    <FlexedWrapper justify={'space-between'}>
+                    <FlexedWrapper
+                        justify={'space-between'}
+                    >
                         <FlexedWrapper
                             direction={'column'}
                             width={'20%'}
@@ -135,13 +142,27 @@ const Footer = () => {
                             align={'flex-start'}
                         >
                             {["LinkedIn", 'Facebook', 'Instagram', 'Twitter'].map((social, ind) =>
-                                <CustomText
-                                    size={'1.2rem'}
-                                    small={'0.8rem'}
-                                    opacity={0.6} key={ind.toString()}
+                                <FlexedWrapper
+                                    justify={'flex-start'}
+                                    align={'center'}
+                                    width={'15%'}
+                                    key={ind.toString()}
+                                    height={'15%'}
                                 >
-                                    {social}
-                                </CustomText>
+                                    <StyledImage
+                                        img={ind === 0 ? LinkedIn : ind === 1 ? Facebook : ind === 2 ? Instagram : Twitter}
+                                        size={'20px'}
+                                    />
+                                    <CustomText
+                                        size={'1.2rem'}
+                                        small={'0.8rem'}
+                                        opacity={0.4}
+                                        padding={'0px 0px 0px 10px'}
+                                        key={ind.toString()}
+                                    >
+                                        {social}
+                                    </CustomText>
+                                </FlexedWrapper>
                             )}
                         </FlexedWrapper>
 
@@ -155,10 +176,12 @@ const Footer = () => {
                             align={'flex-start'}
                         >
                             {['About Us', 'As a Freelancer', 'As an Employer'].map((social, ind) =>
-                                <CustomText size={'1.2rem'}
+                                <CustomText
+                                    size={'1.2rem'}
                                     small={'0.8rem'}
-                                    opacity={0.6}
+                                    opacity={0.4}
                                     key={ind.toString()}
+                                    padding={'10px 0px 10px 0px'}
                                 >
                                     {social}
                                 </CustomText>
@@ -177,7 +200,8 @@ const Footer = () => {
                                 <CustomText
                                     size={'1.2rem'}
                                     small={'0.8rem'}
-                                    opacity={0.6}
+                                    opacity={0.4}
+                                    padding={'10px 0px 10px 0px'}
                                     key={ind.toString()}
                                 >
                                     {social}

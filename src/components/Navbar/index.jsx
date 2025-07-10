@@ -103,7 +103,10 @@ const Navbar = () => {
                                     onClick={() => window.location.href = menu.route}
                                 >
                                     <FlexedWrapper>
-                                        <CustomText normal style={idx >= 1 ? { fontWeight: 700, opacity: 1 } : {}}>
+                                        <CustomText
+                                            normal
+                                            style={idx >= 1 ? { fontWeight: 700, opacity: 1 } : {}}
+                                        >
                                             {menu.item}
                                         </CustomText>
                                         {idx >= 1 ? <StyledImage size={'20px'} img={menu.icon} /> : ""}

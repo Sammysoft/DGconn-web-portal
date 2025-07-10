@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
 import IconLogo from '../../assets/Icons/secondary-logo.svg';
@@ -7,6 +7,7 @@ import { PrimaryButton } from '../Elements/button';
 
 import UserIcon from '../../assets/Icons/user.svg';
 import UsersIcon from '../../assets/Icons/users.svg';
+import CloseIcon from '../../assets/Icons/cancel.svg';
 
 
 import MenuIcon from '../../assets/Icons/menu.svg';
@@ -75,6 +76,11 @@ const Navbar = () => {
         route: '/'
     }];
 
+    const [showMenu, setShowMenu] = useState(false);
+
+
+
+
     return (
         <>
             <NavbarWrapper>
@@ -86,7 +92,8 @@ const Navbar = () => {
                     <StyledImage
                         img={IconLogo}
                         size={'100px'}
-                        small={'100px'} />
+                        small={'100px'}
+                    />
                     <MobileWrapping
                         width={'70%'}
                         align={'flex-end'}
@@ -118,13 +125,61 @@ const Navbar = () => {
                             <PrimaryButton text={'Download App'}></PrimaryButton>
                         </ResponsiveWrapper>
                     </MobileWrapping>
-                    <Toggler>
-                        <StyledImage img={MenuIcon} size={'40px'} small={'30px'} />
+                    <Toggler
+                        onClick={() => { setShowMenu(!showMenu) }}
+                    >
+                        <StyledImage
+                            img={MenuIcon}
+                            size={'40px'}
+                            small={'30px'}
+                        />
                     </Toggler>
                 </FlexedWrapper>
             </NavbarWrapper>
+            {showMenu &&
+                <MenuList>
+                    <FlexedWrapper
+                        justify={'flex-end'}
+                        align={'center'}
+                        width={'90%'}
+                        height={'fit-content'}
+                    >
+                        <StyledImage
+                            img={CloseIcon}
+                            size={'10px'}
+                            small={'20px'}
+                            onClick={() => setShowMenu(!showMenu)}
+                        />
+                    </FlexedWrapper>
+                    {menuList.map((item, id) =>
+                        <CustomText
+                            key={id.toString()}
+                            spadding={'10px 0px 10px 0px'}
+                            bold
+                            onClick={() => window.location.href = item.route}
+                        >
+                            {item.item}
+                        </CustomText>
+                    )}
+                </MenuList>}
         </>
     )
 }
+
+const MenuList = styled.div`
+width: 100vw;
+position: absolute;
+height: 40vh;
+padding: 20px 0px 0px 0px;
+background: #ffffff;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: sapce-between;
+z-index: 999;
+position: absolute;
+top: 0px;
+left: 0px;
+`
 
 export default Navbar;

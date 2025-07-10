@@ -51,7 +51,7 @@ background-position: contain;
 background-size: 100%;
 background-repeat: no-repeat;
 width: 100%;
-height: 60vh;
+height: 50vh;
 margin: 10vh 0px 5vh 0px;
 
 @media (max-width: 1040px){
@@ -136,7 +136,11 @@ const About = () => {
                     )}
                 </AboutWriteGrid>
 
-                <CustomText bold size={'2rem'}>
+                <CustomText
+                bold
+                size={'2rem'}
+                small={'1.5rem'}
+                >
                     Don't take our words for it!<br />
                     Here it from our patners.
                 </CustomText>
@@ -161,7 +165,7 @@ const About = () => {
                 <ProjectWrapper>
                     <FlexedWrapper
                         width={'100%'}
-                        height={'100%'}
+                        height={'80%'}
                         direction={'column'}
                         align={'center'}
                     >
@@ -169,7 +173,7 @@ const About = () => {
                             bold
                             color={'#ffffff'}
                             width={'35%'}
-                            size={'3.5rem'}
+                            size={'3rem'}
                             style={{ textAlign: "center", marginBottom: '20px' }}
                         >
                             Ready to Start Your

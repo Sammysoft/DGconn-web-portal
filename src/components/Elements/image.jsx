@@ -17,7 +17,7 @@ height: ${(props) => props.small ? props.small : "100%"};
 }
 `;
 
-export const StyledImage = ({ size, img, small, border, fit }) => {
+export const StyledImage = ({ size, img, small, border, fit, onClick }) => {
     return (
         <>
             <ImageWrapper
@@ -26,6 +26,7 @@ export const StyledImage = ({ size, img, small, border, fit }) => {
                 src={img}
                 small={small}
                 brad={border}
+                onClick={onClick}
             />
         </>
     )

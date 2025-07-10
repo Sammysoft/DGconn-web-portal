@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
 
-import FootLogo from '../../assets/images/secondary-logo.svg';
+import FootLogo from '../../assets/Images/secondary-logo.svg';
 import { CustomText, FlexedWrapper } from '../Styles';
 import { Colors } from '../../Res';
 import Input from '../Elements/input';

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
-import IconLogo from '../../assets/images/secondary-logo.svg';
+import IconLogo from '../../assets/Images/secondary-logo.svg';
 import { CustomText, FlexedWrapper } from '../Styles';
 import { PrimaryButton } from '../Elements/button';
 

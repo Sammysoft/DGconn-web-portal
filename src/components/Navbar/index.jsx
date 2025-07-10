@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StyledImage } from '../Elements/image';
-import IconLogo from '../../assets/Icons/icon-logo.svg';
+import IconLogo from '../../assets/images/secondary-logo.svg';
 import { CustomText, FlexedWrapper } from '../Styles';
 import { PrimaryButton } from '../Elements/button';
 
@@ -18,7 +18,7 @@ margin: auto;
 
 
 @media (max-width: 1040px){
-height: 15vh;
+height: 10vh;
 }
 
 `;
@@ -51,24 +51,26 @@ display: block;
 
 
 const Navbar = () => {
+
     const menuList = [{
-        item: "Careers",
+        item: "Home",
         icon: null,
         route: '/'
     }, {
-        item: "About",
-        icon: null,
-        route: '/'
-    }, {
-        item: "FAQs",
-        icon: null,
-        route: '/'
+        item: "As Freelancer",
+        icon: UsersIcon,
+        route: 'https://app.dgconn.com/onboard/employee'
     }, {
         item: "As Employer",
         icon: UsersIcon,
-        route: '/'
+        route: 'https://app.dgconn.com/onboard/employer'
     }, {
-        item: "As Employee",
+        item: "As Artisan",
+        icon: UserIcon,
+        route: 'https://app.dgconn.com/onboard/employee'
+    },
+    {
+        item: "Marketplace",
         icon: UserIcon,
         route: '/'
     }];
@@ -76,17 +78,35 @@ const Navbar = () => {
     return (
         <>
             <NavbarWrapper>
-                <FlexedWrapper direction={'row'} align={'center'} justify={'space-between'}>
-                    <StyledImage img={IconLogo} size={'40px'} small={'30px'} />
-                    <MobileWrapping width={'60%'} align={'flex-end'} justify={'space-between'}>
-                        <FlexedWrapper width={'70%'} align={'flex-end'} justify={'space-evenly'}>
+                <FlexedWrapper
+                    direction={'row'}
+                    align={'center'}
+                    justify={'space-between'}
+                >
+                    <StyledImage
+                        img={IconLogo}
+                        size={'100px'}
+                        small={'100px'} />
+                    <MobileWrapping
+                        width={'70%'}
+                        align={'flex-end'}
+                        justify={'space-between'}
+                    >
+                        <FlexedWrapper
+                            width={'70%'}
+                            align={'flex-end'}
+                            justify={'space-evenly'}
+                        >
                             {menuList.map((menu, idx) =>
-                                <MenuItem key={idx.toString()}>
+                                <MenuItem
+                                    key={idx.toString()}
+                                    onClick={() => window.location.href = menu.route}
+                                >
                                     <FlexedWrapper>
-                                        <CustomText normal style={idx >= 3 ? { fontWeight: 700, opacity: 1 } : {}}>
+                                        <CustomText normal style={idx >= 1 ? { fontWeight: 700, opacity: 1 } : {}}>
                                             {menu.item}
                                         </CustomText>
-                                        {idx >= 3 ? <StyledImage size={'20px'} img={menu.icon} /> : ""}
+                                        {idx >= 1 ? <StyledImage size={'20px'} img={menu.icon} /> : ""}
                                     </FlexedWrapper>
                                 </MenuItem>
                             )}
@@ -95,9 +115,9 @@ const Navbar = () => {
                             <PrimaryButton text={'Download App'}></PrimaryButton>
                         </ResponsiveWrapper>
                     </MobileWrapping>
-                     <Toggler>
-                            <StyledImage img={MenuIcon} size={'40px'} small={'30px'} />
-                        </Toggler>
+                    <Toggler>
+                        <StyledImage img={MenuIcon} size={'40px'} small={'30px'} />
+                    </Toggler>
                 </FlexedWrapper>
             </NavbarWrapper>
         </>

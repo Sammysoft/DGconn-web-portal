@@ -14,12 +14,14 @@ height: fit-content;
 border: ${(props) => props.borderColor ? `1px solid ${props.borderColor}` : ""};
 width: ${(props) => props.width ? props.width : ""};
 justify-content: center;
+margin: ${(props) => props.margin ? props.margin : ""};
 `;
 
-export const PrimaryButton = ({ bgColor, color, text, border, onClick, borderColor, padding, width }) => {
+export const PrimaryButton = ({ bgColor, size, color, text, border, onClick, borderColor, padding, width, margin }) => {
     return (
         <>
             <ButtonWrapper
+                margin={margin}
                 bgColor={bgColor}
                 border={border}
                 onClick={onClick}
@@ -27,7 +29,9 @@ export const PrimaryButton = ({ bgColor, color, text, border, onClick, borderCol
                 padding={padding}
                 width={width}
             >
-                <CustomText color={color}
+                <CustomText
+                    color={color}
+                    size={size}
                     small={'0.8rem'}
                 >
                     {text}

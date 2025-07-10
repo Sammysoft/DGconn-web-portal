@@ -15,6 +15,11 @@ import ViewBack from '../../assets/Images/viewback.svg';
 import JobIcon from '../../assets/Icons/job.svg';
 import UserIcon from '../../assets/Icons/usercircle.svg';
 
+import FreelanceShot from '../../assets/Images/freelance_shot.svg';
+import ArtisanShot from '../../assets/Images/artisan_shot.svg';
+import MarketplaceShot from '../../assets/Images/marketplace_shot.svg';
+import EmployerShot from '../../assets/Images/employer_shot.svg';
+
 import Avatar1 from '../../assets/Icons/avatar1.svg';
 import Avatar2 from '../../assets/Icons/avatar2.svg';
 import Avatar3 from '../../assets/Icons/avatar3.svg';
@@ -27,6 +32,7 @@ import Zoom from '../../assets/Icons/zoom.svg';
 
 import Divider from '../Elements/divider';
 import { PrimaryButton } from '../Elements/button';
+import AdsCards from './ads-cards';
 
 
 const DiscoverWrapper = styled.div`
@@ -137,7 +143,7 @@ const Discover = () => {
                     </CustomText>
                 </FlexedWrapper>
                 <DiscoverCards />
-
+                <AdsCards />
                 <FlexedWrapper invert={'column'}
                     justify={'space-between'}
                     align={'space-between'}
@@ -151,51 +157,79 @@ const Discover = () => {
                         justify={'flex-start'}
                         align={'flex-start'}>
                         <CustomText bold size={'2.5rem'} small={'1.5rem'}>
-                            Discover Opportunities
+                            What We Offer
                         </CustomText>
-                        <CustomText weight={500} size={'2rem'} opacity={0.3}>
-                            that inspire
-                        </CustomText>
-                        <CustomText size={'1rem'} width={'70%'} small={'0.7rem'} weight={100} >
-                            Our intuitive platform connects skilled job seekers with top employers.
-                            Whether you're aiming to launch your career, make a pivotal change,
-                            or discover that extraordinary opportunity.
+                        <CustomText
+                            size={'1rem'}
+                            width={'70%'}
+                            small={'0.7rem'}
+                            weight={100}
+                            spadding={'0px 0px 5vh 0px'}
+                        >
+                            Discover a unified platform built to connect buyers.
+                            skilled professionals, and employers - empowering work, ecommerce and creativity.
                         </CustomText>
                     </FlexedWrapper>
-                    <FlexedWrapper direction={'column'}
-                        justify={"space-between"} align={'flex-start'}
+                    <FlexedWrapper
+                        direction={'column'}
+                        justify={"space-between"}
+                        align={'flex-start'}
                         width={'40%'}
                         height={'100%'}
                         smallWidth={'100%'}
                     >
-                        <FlexedWrapper justify={'space-between'}
+                        <FlexedWrapper
+                            justify={'space-between'}
                             width={'100%'}
                             align={'space-between'}
                         >
-                            <StyledImage img={RemoteIcon}
-                                size={'40px'} small={'30px'}
+                            <StyledImage
+                                img={RemoteIcon}
+                                size={'40px'}
+                                small={'30px'}
                             />
                             <FlexedWrapper
                                 direction={'column'}
                                 justify={'flex-start'}
                                 width={'85%'}
                                 align={'flex-start'}>
-                                <CustomText bold size={'1.2rem'} small={'0.8rem'}>Work Globally</CustomText>
-                                <CustomText normal size={'0.8rem'}>
+                                <CustomText
+                                    bold
+                                    size={'1.2rem'}
+                                    small={'1rem'}>
+                                    Work Globally
+                                </CustomText>
+                                <CustomText
+                                    small
+                                    size={'0.8rem'}
+                                    weight={100}
+                                >
                                     Work Remotely across 100+ continents, get paid in your desired currency
                                     by doing what you love doing best.
                                 </CustomText>
                             </FlexedWrapper>
                         </FlexedWrapper>
-                        <FlexedWrapper justify={'space-between'} width={'100%'} align={'space-between'}>
-                            <StyledImage img={TalentIcon} size={'40px'} small={'30px'} />
+                        <FlexedWrapper
+                            justify={'space-between'}
+                            width={'100%'}
+                            align={'space-between'}
+                        >
+                            <StyledImage
+                                img={TalentIcon}
+                                size={'40px'}
+                                small={'30px'}
+                            />
                             <FlexedWrapper
                                 direction={'column'}
                                 justify={'flex-start'}
                                 width={'85%'}
                                 align={'flex-start'}>
-                                <CustomText bold size={'1.2rem'} small={'0.8rem'}>Work Globally</CustomText>
-                                <CustomText normal size={'0.8rem'}>
+                                <CustomText bold size={'1.2rem'} small={'1rem'}>Work Globally</CustomText>
+                                <CustomText
+                                    small
+                                    size={'0.8rem'}
+                                    weight={100}
+                                >
                                     Work Remotely across 100+ continents, get paid in your desired currency
                                     by doing what you love doing best.
                                 </CustomText>
@@ -203,126 +237,250 @@ const Discover = () => {
                         </FlexedWrapper>
                     </FlexedWrapper>
                 </FlexedWrapper>
-
-                <ImageBackground>
-                    <FlexedWrapper
-                        height={'80%'}
-                        smallHeight={'90%'}
-                        width={'70%'}
-                        smallWidth={'90%'}
-                        justify={'space-evenly'}
-                        invert={'column'}
+                <GridWrapper>
+                    <ServiceWrapper
+                        bgcolor={"#042B27"}
                     >
-                        <FlexedWrapper
-                            direction={'column'}
-                            height={'70%'}
-                            smallHeight={'45%'}
-                            justify={'space-evenly'}
-                            width={'50%'}
-                            smallWidth={'90%'}
-
+                        <CustomText
+                            color='#AAF27F80'
+                            size={'1rem'}
+                            padding={'20px 0px 5px 30px'}
                         >
-                            <ItemListingWrapper>
-                                <FlexedWrapper
-                                    justify={'space-between'}
-                                    padding={'15px 10px 5px 10px'}
-                                    height={'fit-content'}
-                                >
-                                    <StyledImage img={JobIcon} size={'30px'} small={'25px'} />
-                                    <CustomText width={'90%'} smallWidth={'85%'}>Job</CustomText>
-                                </FlexedWrapper>
-                                <Divider />
-
-                                {jobList.map((val, idx) =>
-                                    <FlexedWrapper key={idx.toString()}
-                                        height={'fit-content'}
-                                        width={'90%'}
-                                        align={'space-between'}
-                                        justify={'space-between'}
-                                        padding={'2.5%'}
-                                    >
-                                        <StyledImage size={'40px'} img={val.icon} small={'30px'} />
-                                        <FlexedWrapper
-                                            width={'70%'}
-                                            direction={'column'}
-                                            justify={'center'}
-                                            align={'flex-start'}>
-                                            <CustomText size={'1.2rem'} small={'0.8rem'}>{val.name}</CustomText>
-                                            <CustomText
-                                                opacity={0.4}
-                                                width="fit-content"
-                                                normal
-                                            >
-                                                {val.role}
-                                            </CustomText>
-                                        </FlexedWrapper>
-                                        <PrimaryButton
-                                            text={'Apply'}
-                                            padding={'2px'}
-                                        />
-                                    </FlexedWrapper>
-                                )}
-                            </ItemListingWrapper>
-                        </FlexedWrapper>
+                            Freelancing
+                        </CustomText>
+                        <CustomText
+                            color='#AAF27F'
+                            size={'1.5rem'}
+                            padding={'5px 0px 5px 30px'}
+                        >
+                            Work Without Limits
+                        </CustomText>
+                        <CustomText
+                            color='#AAF27F80'
+                            size={'0.7rem'}
+                            width={'70%'}
+                            padding={'10px 0px 5px 30px'}
+                        >
+                            Weather you're a designer, writer, or developer --- find projects or offer services. Freelance your way. Sign up with your mail account to get started with your tech journey.
+                        </CustomText>
 
                         <FlexedWrapper
-                            direction={'column'}
-                            height={'100%'}
-                            smallHeight={'35%'}
-                            justify={'flex-end'}
-                            align={'flex-end'}
-                            width={'45%'}
-                            smallWidth={'90%'}
+                            width={'100%'}
+                            justify={'space-between'}
+                            height={'fit-content'}
+                            align={'flex-start'}
+                            invert={'column'}
                         >
-                            <ItemListingWrapper>
-                                <FlexedWrapper justify={'space-between'}
-                                    padding={'15px 10px 5px 10px'}
-                                    height={'fit-content'} >
-                                    <StyledImage img={UserIcon} size={'30px'} small={'20px'} />
-                                    <CustomText width={'65%'} smallWidth={'65%'}>Freelancer</CustomText>
-                                    <CustomText normal width={'20%'} smallWidth={'20%'}>Filter</CustomText>
-                                </FlexedWrapper>
-
-                                <Divider />
-
-                                {freelancerList.map((person, idx) =>
-                                    <FlexedWrapper key={idx.toString()}
-                                        height={'fit-content'}
-                                        width={'90%'}
-                                        align={'space-between'}
-                                        justify={'space-between'}
-                                        padding={'2.5%'}
-                                    >
-                                        <StyledImage size={'40px'} img={person.icon} small={'30px'} />
-                                        <FlexedWrapper
-                                            width={'70%'}
-                                            direction={'column'}
-                                            justify={'center'}
-                                            align={'flex-start'}>
-                                            <CustomText size={'1.2rem'} small={'0.8rem'}>{person.name}</CustomText>
-                                            <CustomText
-                                                opacity={0.4}
-                                                width="fit-content"
-                                                normal
-                                                small={'0.7rem'}
-                                            >
-                                                {person.role}
-                                            </CustomText>
-                                        </FlexedWrapper>
-                                        <CustomText bold width={'15%'}>
-                                            {person.pricing}
-                                        </CustomText>
-                                    </FlexedWrapper>
-                                )}
-
-                            </ItemListingWrapper>
+                            <PrimaryButton
+                                text={'Get Hired'}
+                                color={'#000000'}
+                                bgColor={'#ffffff'}
+                                width={'fit-content'}
+                                size={'0.7rem'}
+                                margin={'10px 0px 10px 30px'}
+                            />
+                            <StyledImage
+                                size={'300px'}
+                                img={FreelanceShot}
+                            />
                         </FlexedWrapper>
-                    </FlexedWrapper>
-                </ImageBackground>
+                    </ServiceWrapper>
+                    <ServiceWrapper
+                        bgcolor={"#7913E5"}
+                    >
+                        <CustomText
+                            color='#FED6F1B2'
+                            size={'1rem'}
+                            padding={'20px 0px 5px 0px'}
+                            align={'center'}
+                            width={'100%'}
+                            smallWidth={'100%'}
+                        >
+                            Artisans
+                        </CustomText>
+                        <CustomText
+                            color='#FED6F1'
+                            size={'1.5rem'}
+                            padding={'5px 0px 5px 0px'}
+                            width={'100%'}
+                            align={'center'}
+                            smallWidth={'100%'}
+                        >
+                            Showcase Local Skills
+                        </CustomText>
+                        <CustomText
+                            color='#AAF27F80'
+                            size={'0.7rem'}
+                            padding={'10px 0px 5px 15%'}
+                            width={'70%'}
+                            align={'center'}
+                            smallWidth={'70%'}
+                        >
+                            Hire skilled artisans near you --- Plumbers, tailers, carpenters, and more. Get real results from real talent.
+                        </CustomText>
+
+                        <FlexedWrapper
+                            width={'100%'}
+                            justify={'space-between'}
+                            height={'fit-content'}
+                            align={'center'}
+                            direction={'column'}
+                        >
+                            <PrimaryButton
+                                text={'Get Hired'}
+                                color={'#000000'}
+                                bgColor={'#ffffff'}
+                                width={'fit-content'}
+                                size={'0.7rem'}
+                                margin={'10px 0px 10px 0px'}
+                            />
+                            <StyledImage
+                                size={'500px'}
+                                img={ArtisanShot}
+                                fit={'top left'}
+                            />
+                        </FlexedWrapper>
+                    </ServiceWrapper>
+
+                    <ServiceWrapper
+                        bgcolor={"#1A4BC1"}
+                    >
+                        <CustomText
+                            color='#FFFFFF80'
+                            size={'1rem'}
+                            padding={'20px 0px 5px 30px'}
+                        >
+                            Marketplace
+                        </CustomText>
+                        <CustomText
+                            color='#FFFFFF'
+                            size={'1.5rem'}
+                            padding={'5px 0px 5px 30px'}
+
+                        >
+                            Buy & Sell with Ease
+                        </CustomText>
+                        <CustomText
+                            color='#FFFFFF99'
+                            size={'0.7rem'}
+                            padding={'10px 0px 5px 30px'}
+                            width={'70%'}
+                        >
+                            Find quality products from verified or list yours in minutes, A trusted space for seemless digital ecommerce.
+                        </CustomText>
+
+                        <FlexedWrapper
+                            width={'100%'}
+                            justify={'space-between'}
+                            height={'fit-content'}
+                            align={'flex-start'}
+                            direction={'column'}
+                            margin={'0px 0px 0px 30px'}
+                            invert={'column'}
+                        >
+                            <PrimaryButton
+                                text={'Buy Now'}
+                                color={'#000000'}
+                                bgColor={'#ffffff'}
+                                width={'fit-content'}
+                                size={'0.7rem'}
+                                margin={'10px 0px 10px 0px'}
+                            />
+                            <StyledImage
+                                size={'500px'}
+                                img={MarketplaceShot}
+                                fit={'top left'}
+                            />
+                        </FlexedWrapper>
+                    </ServiceWrapper>
+
+                    <ServiceWrapper
+                        bgcolor={"#042B27"}
+                    >
+                        <CustomText
+                            color='#AAF27F80'
+                            size={'1rem'}
+                            padding={'20px 0px 5px 30px'}
+                        >
+                            Employer
+                        </CustomText>
+                        <CustomText
+                            color='#AAF27F'
+                            size={'1.5rem'}
+                            padding={'5px 0px 5px 30px'}
+                        >
+                            Hire Smarter
+                        </CustomText>
+                        <CustomText
+                            color='#AAF27F80'
+                            size={'0.7rem'}
+                            width={'70%'}
+                            padding={'10px 0px 5px 30px'}
+                        >
+                            Post jobs, find top talents, and manage applicants. A streamlined hiring experience for businesses.
+                        </CustomText>
+
+                        <FlexedWrapper
+                            width={'100%'}
+                            justify={'space-between'}
+                            height={'fit-content'}
+                            align={'flex-start'}
+                            invert={'column'}
+                        >
+                            <PrimaryButton
+                                text={'Post a Job'}
+                                color={'#000000'}
+                                bgColor={'#ffffff'}
+                                width={'fit-content'}
+                                size={'0.7rem'}
+                                margin={'10px 0px 10px 30px'}
+                            />
+                            <StyledImage
+                                size={'300px'}
+                                img={EmployerShot}
+                            />
+                        </FlexedWrapper>
+                    </ServiceWrapper>
+                </GridWrapper>
             </DiscoverWrapper>
         </>
     )
 }
+
+
+const GridWrapper = styled.div`
+width: 100%;
+margin: 5vh 2.5% 5vh 0%;
+height: fit-content;
+display: flex;
+flex-wrap: wrap;
+gap: 1%;
+
+@media (max-width: 1040px){
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+flex-wrap: none;
+}
+`;
+
+const ServiceWrapper = styled.div`
+background: ${(props) => props.bgcolor ? props.bgcolor : ""};
+border-radius: 15px;
+// padding: 15px;
+width: 48%;
+height: 35vh;
+box-shadow: 0px 4px 15px 0px #78787869;
+overflow-y: hidden;
+overflow-x: hidden;
+margin-bottom: 2vh;
+
+@media (max-width: 1040px){
+width: 100%;
+height: fit-content
+}
+`;
 
 const CardWrapper = styled.div`
 margin: 5vh 0px 5vh 0px;
@@ -342,7 +500,7 @@ justify-content: center;
 const Card = styled.div`
 width: 30%;
 border-radius: 30px;
-background-color: ${Colors.GREY.NORMAL};
+background-color: ${(props) => props.bgcolor ? props.bgcolor : Colors.GREY.NORMAL};
 height: 50vh;
 position: relative;
 border: 1px solid #A9A6A652;
@@ -370,15 +528,8 @@ const DiscoverCards = () => {
         body: `Join thousands of freelancer getting employed on daily basis
         by top clients, all you need is the skills, apply for your desired
         job, get employed and get paid.`,
-        img: Connect
-    }, {
-        title: "Talent",
-        btnText: "Fulltime",
-        head: `Connect with Freelancer with top skills`,
-        body: `Connect and get your project done by freelancer with top skills
-        from framer expert to figma experts. Get your project a better
-        skill expert for it.`,
-        img: Talent
+        img: Connect,
+        bgcolor: "#262626"
     }, {
         title: "Ecommerce",
         btnText: "Buy Now",
@@ -386,42 +537,68 @@ const DiscoverCards = () => {
         body: `Shop required tools for your vocational activities , ranging
         from electricals to engineering tools. We have varieties
         of tools you could use for your vocational work.`,
-        img: Ecommerce
+        img: Talent,
+        bgcolor: "#1A4BC1"
+    }, {
+        title: "Talent",
+        btnText: "Fulltime",
+        head: `Connect with Freelancer with top skills`,
+        body: `Connect and get your project done by freelancer with top skills
+        from framer expert to figma experts. Get your project a better
+        skill expert for it.`,
+        img: Ecommerce,
+        bgcolor: '#262626'
     }]
 
     return (
         <>
             <CardWrapper>
                 {cardList.map((item, idx) =>
-                    <Card key={idx.toString()}>
+                    <Card
+                        key={idx.toString()}
+                        bgcolor={item.bgcolor}
+                    >
                         <CardDisplayImage>
-                            <StyledImage size={'100%'} img={item.img} />
+                            <StyledImage
+                                size={'100%'}
+                                img={item.img}
+                                border={'20px'}
+                            />
                         </CardDisplayImage>
                         <FlexedWrapper
                             direction={'column'}
                             height={'50%'}
                             align={'flex-start'}
                             justify={'space-evenly'}
-                            padding={"15px"}>
+                            padding={"15px"}
+                        >
                             <CustomText
                                 size={'1rem'}
                                 small={'0.7rem'}
+                                color={'#ffffff'}
                                 normal
                                 style={{ textTransform: "uppercase" }}
                             >
                                 {item.title}
                             </CustomText>
-                            <CustomText bold
+                            <CustomText
+                                bold
                                 size={'1.2rem'}
-                                small={'0.8rem'} width={'75%'}
-                                smallWidth={'75%'} >
+                                small={'0.8rem'}
+                                width={'75%'}
+                                smallWidth={'75%'}
+                                ssize={'1.2rem'}
+                                color={'#ffffff'}
+                            >
                                 {item.head}
                             </CustomText>
-                            <CustomText normal
+                            <CustomText
+                                normal
                                 size={'0.6rem'}
                                 opacity={0.4}
                                 width={'90%'}
                                 smallWidth={'90%'}
+                                color={'#ffffff'}
                             >
                                 {item.body}
                             </CustomText>

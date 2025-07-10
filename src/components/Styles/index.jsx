@@ -10,6 +10,7 @@ align-items: ${(props) => props.align ? props.align : "center"};
 justify-content: ${(props) => props.justify ? props.justify : "center"};
 height: ${(props) => props.height ? props.height : "100%"};
 padding: ${(props) => props.padding ? props.padding : ""};
+margin: ${(props)=> props.margin ? props.margin : ""};
 
 
 @media (max-width: 1040px){
@@ -31,6 +32,8 @@ export const CustomText = styled.div`
  @media (max-width: 1040px){
   font-size: ${(props) => props.normal ? '0.7rem' : props.small};
    width: ${(props) => props.smallWidth ? props.smallWidth : "fit-content"};
+  font-size: ${(props) => props.normal ? '0.8rem' : props.ssize};
+   padding: ${(props) => props.spadding ? props.spadding : ""};
  }
 `;
 

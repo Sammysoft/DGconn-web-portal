@@ -7,6 +7,9 @@ const ImageWrapper = styled.img`
 width: ${(props) => props.size ? props.size : "100%"};
 height: ${(props) => props.size ? props.size : "100%"};
 object-fit: contain;
+object-position: ${(props) => props.fit ? props.fit : ""};
+border-top-right-radius: ${(props) => props.brad ? props.brad : ""};
+border-top-left-radius: ${(props) => props.brad ? props.brad : ""};
 
 @media (max-width: 1040px){
 width: ${(props) => props.small ? props.small : "100%"};
@@ -14,10 +17,16 @@ height: ${(props) => props.small ? props.small : "100%"};
 }
 `;
 
-export const StyledImage = ({ size, img, small }) => {
+export const StyledImage = ({ size, img, small, border, fit }) => {
     return (
         <>
-            <ImageWrapper size={size} src={img} small={small} />
+            <ImageWrapper
+                size={size}
+                fit={fit}
+                src={img}
+                small={small}
+                brad={border}
+            />
         </>
     )
 }

@@ -73,6 +73,7 @@ const AdsCards = () => {
                                 size={'2.3rem'}
                                 color={'#ffffff'}
                                 padding={'0px 0px 20px 50px'}
+                                spadding={'0px 0px 20px 20px'}
                                 weight={900}
                                 bold
                             >
@@ -83,6 +84,7 @@ const AdsCards = () => {
                                 size={'1.2rem'}
                                 color={'#ffffff'}
                                 padding={'20px 0px 5vh 50px'}
+                                spadding={'0px 0px 20px 20px'}
                                 opacity={0.5}
                                 small={'0.8rem'}
                                 smallWidth={'95%'}
@@ -165,9 +167,9 @@ const AdsCards = () => {
                                                 Product Delievered
                                             </CustomText>
                                             <StyledImage
-                                            img={Check}
-                                            size={'20px'}
-                                            small={'20px'}
+                                                img={Check}
+                                                size={'20px'}
+                                                small={'20px'}
                                             />
                                         </FlexedWrapper>
                                     </WhiteWrapper>
@@ -268,6 +270,7 @@ const AdsCards = () => {
                                 size={'2.3rem'}
                                 color={'#ffffff'}
                                 padding={'60px 0px 20px 30px'}
+                                spadding={'20px 0px 20px 20px'}
                                 weight={900}
                                 bold
                             >
@@ -278,6 +281,7 @@ const AdsCards = () => {
                                 size={'1.2rem'}
                                 color={'#ffffff'}
                                 padding={'20px 0px 5vh 30px'}
+                                spadding={'20px 0px 5vh 20px'}
                                 opacity={0.5}
                                 small={'0.8rem'}
                                 smallWidth={'95%'}

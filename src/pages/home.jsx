@@ -10,8 +10,13 @@ import Footer from '../components/Footer';
 import FAQs from '../components/Home/fag';
 
 const Wrapper = styled.div`
+width: 80%;
+margin: 0px 10% 0px 10%;
+
+@media (max-width: 1040px){
 width: 100%;
-background-color: #ffffff;
+margin: 0px;
+}
 `;
 
 const HomePage = ()=>{

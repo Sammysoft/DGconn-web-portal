@@ -10,6 +10,7 @@ object-fit: contain;
 object-position: ${(props) => props.fit ? props.fit : ""};
 border-top-right-radius: ${(props) => props.brad ? props.brad : ""};
 border-top-left-radius: ${(props) => props.brad ? props.brad : ""};
+border-radius: ${(props)=> props.borderrad ? props.borderrad: ""};
 
 @media (max-width: 1040px){
 width: ${(props) => props.small ? props.small : "100%"};
@@ -17,7 +18,7 @@ height: ${(props) => props.small ? props.small : "100%"};
 }
 `;
 
-export const StyledImage = ({ size, img, small, border, fit, onClick }) => {
+export const StyledImage = ({ size, img, small, border, fit, onClick, borderrad }) => {
     return (
         <>
             <ImageWrapper
@@ -26,6 +27,7 @@ export const StyledImage = ({ size, img, small, border, fit, onClick }) => {
                 src={img}
                 small={small}
                 brad={border}
+                borderrad={borderrad}
                 onClick={onClick}
             />
         </>

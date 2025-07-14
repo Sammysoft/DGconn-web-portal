@@ -30,7 +30,7 @@ padding: 20px;
 border-radius: 20px;
 margin: 10vh 0px 10vh 0px;
 
-height: 45vh;
+height: 55vh;
 
 @media (max-width: 1040px){
 height: fit-content;
@@ -47,7 +47,7 @@ const AdsCards = () => {
 
                     <FlexedWrapper
                         justify={'space-between'}
-                        align={'flex-start'}
+                        align={'center'}
                         width={'100%'}
                         height={'100%'}
                         invert={'column'}
@@ -61,18 +61,18 @@ const AdsCards = () => {
                         >
                             <CustomText
                                 color={'#ffffff'}
-                                size={'1rem'}
+                                size={'1.2rem'}
                                 small={'0.8rem'}
-                                padding={'30px 0px 20px 20px'}
+                                padding={'60px 0px 20px 50px'}
                                 spadding={'30px 0px 20px 20px'}
                             >
                                 Marketplace
                             </CustomText>
                             <CustomText
                                 width={'80%'}
-                                size={'2rem'}
+                                size={'2.3rem'}
                                 color={'#ffffff'}
-                                padding={'0px 0px 20px 20px'}
+                                padding={'0px 0px 20px 50px'}
                                 weight={900}
                                 bold
                             >
@@ -80,9 +80,9 @@ const AdsCards = () => {
                             </CustomText>
                             <CustomText
                                 width={'80%'}
-                                size={'1rem'}
+                                size={'1.2rem'}
                                 color={'#ffffff'}
-                                padding={'20px 0px 5vh 20px'}
+                                padding={'20px 0px 5vh 50px'}
                                 opacity={0.5}
                                 small={'0.8rem'}
                                 smallWidth={'95%'}
@@ -90,7 +90,7 @@ const AdsCards = () => {
                                 We screen for skill, professionalism and reliability making possible to get the best result on your product we have talented skill in various categories
                             </CustomText>
                             <FlexedWrapper
-                                width={'50%'}
+                                width={'60%'}
                                 justify={'space-evenly'}
                                 align={'center'}
                                 height={'fit-content'}
@@ -184,7 +184,7 @@ const AdsCards = () => {
                 >
                     <FlexedWrapper
                         justify={'space-between'}
-                        align={'flex-start'}
+                        align={'center'}
                         width={'100%'}
                         height={'100%'}
                         invert={'column'}
@@ -251,7 +251,7 @@ const AdsCards = () => {
                             direction={'column'}
                             justify={'flex-start'}
                             align={'left'}
-                            width={'48%'}
+                            width={'55%'}
                             smallWidth={'100%'}
                         >
                             {/* <CustomText
@@ -265,9 +265,9 @@ const AdsCards = () => {
                             </CustomText> */}
                             <CustomText
                                 width={'80%'}
-                                size={'2rem'}
+                                size={'2.3rem'}
                                 color={'#ffffff'}
-                                padding={'30px 0px 20px 20px'}
+                                padding={'60px 0px 20px 30px'}
                                 weight={900}
                                 bold
                             >
@@ -275,9 +275,9 @@ const AdsCards = () => {
                             </CustomText>
                             <CustomText
                                 width={'80%'}
-                                size={'1rem'}
+                                size={'1.2rem'}
                                 color={'#ffffff'}
-                                padding={'20px 0px 5vh 20px'}
+                                padding={'20px 0px 5vh 30px'}
                                 opacity={0.5}
                                 small={'0.8rem'}
                                 smallWidth={'95%'}
@@ -285,7 +285,7 @@ const AdsCards = () => {
                                 We screen for skill, professionalism and reliability making possible to get the best result on your product we have talented skill in various categories
                             </CustomText>
                             <FlexedWrapper
-                                width={'50%'}
+                                width={'45%'}
                                 justify={'space-evenly'}
                                 align={'center'}
                                 height={'fit-content'}
@@ -328,10 +328,10 @@ background-image: url('${(props) => props.bgimage ? props.bgimage : ""}');
 background-position: cover;
 background-repeat: no-repeat;
 background-size: 100%;
-width: 48%;
+width: 40%;
 border-radius: 20px;
 padding:20px;
-height: 90%;
+height: 80%;
 
 @media (max-width: 1040px){
 width: 90%;

@@ -78,9 +78,6 @@ const Navbar = () => {
 
     const [showMenu, setShowMenu] = useState(false);
 
-
-
-
     return (
         <>
             <NavbarWrapper>
@@ -100,7 +97,7 @@ const Navbar = () => {
                         justify={'space-between'}
                     >
                         <FlexedWrapper
-                            width={'70%'}
+                            width={'75%'}
                             align={'flex-end'}
                             justify={'space-evenly'}
                         >
@@ -126,7 +123,9 @@ const Navbar = () => {
                         </ResponsiveWrapper>
                     </MobileWrapping>
                     <Toggler
-                        onClick={() => { setShowMenu(!showMenu) }}
+                        onClick={() => {
+                            setShowMenu(!showMenu)
+                        }}
                     >
                         <StyledImage
                             img={MenuIcon}
@@ -148,7 +147,8 @@ const Navbar = () => {
                             img={CloseIcon}
                             size={'10px'}
                             small={'20px'}
-                            onClick={() => setShowMenu(!showMenu)}
+                            onClick={() =>
+                                setShowMenu(!showMenu)}
                         />
                     </FlexedWrapper>
                     {menuList.map((item, id) =>
@@ -161,7 +161,8 @@ const Navbar = () => {
                             {item.item}
                         </CustomText>
                     )}
-                </MenuList>}
+                </MenuList>
+            }
         </>
     )
 }

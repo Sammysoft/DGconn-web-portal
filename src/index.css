@@ -1,12 +1,12 @@
 :root {
-  background-color: #ffffff;
+  background-color: #F2F7F8;
   font-family: "Inter Tight", sans-serif;
 }
 
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #ffffff;
+    background-color: #F2F7F8;
     font-family: "Inter Tight", sans-serif;
   }
 }

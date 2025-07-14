@@ -8,6 +8,7 @@ import About3 from '../../assets/Icons/about3.svg';
 
 import ProjectImg from '../../assets/Images/project.svg';
 import { PrimaryButton } from '../Elements/button';
+import { StyledImage } from '../Elements/image';
 
 const Wrapper = styled.div`
 width: 90%;
@@ -30,8 +31,8 @@ flex-direction: column;
 
 const CardWrapper = styled.div`
 border-radius: 10px;
-width: 30%;
-height: 48vh;
+width: 32%;
+height: 45vh;
 background-image: url(${(props) => props.bgImage ? props.bgImage : ""});
 background-position: contain;
 background-repeat: no-repeat;
@@ -44,6 +45,19 @@ width: 100%;
 margin: 2vh 0px 2vh 0px;
 }
 `;
+
+const LastCardWrapper = styled.div`
+border-radius: 10px;
+width: 32%;
+height: 45vh;
+background-color: ${(props) => props.bgcolor ? props.bgcolor : ""};
+position: relative;
+
+@media (max-width: 1040px){
+width: 100%;
+margin: 2vh 0px 2vh 0px;
+}
+`
 
 const ProjectWrapper = styled.div`
 background-image: url("${ProjectImg}");
@@ -137,9 +151,9 @@ const About = () => {
                 </AboutWriteGrid>
 
                 <CustomText
-                bold
-                size={'2rem'}
-                small={'1.5rem'}
+                    bold
+                    size={'2rem'}
+                    small={'1.5rem'}
                 >
                     Don't take our words for it!<br />
                     Here it from our patners.
@@ -147,12 +161,68 @@ const About = () => {
 
                 <AboutWriteGrid>
                     {PersonList.map((person, idx) =>
-                        <CardWrapper
-                            key={idx.toString()}
-                            bgImage={person.bgImage}
-                        >
+                        <>
+                            {idx !== 2 &&
+                                <CardWrapper
+                                    key={idx.toString()}
+                                    bgImage={person.bgImage}
+                                >
 
-                        </CardWrapper>
+                                </CardWrapper>}
+
+                            {idx === 2 &&
+                                <LastCardWrapper
+                                    bgcolor={'#ffffff'}
+                                >
+                                    <FlexedWrapper
+                                        direction={'column'}
+                                        height={'80%'}
+                                        width={'90%'}
+                                        padding={'0px 5% 0px 5% 0px'}
+                                    >
+                                        <FlexedWrapper>
+                                            <StyledImage
+                                                img={person.bgImage}
+                                                size={'50px'}
+                                                borderrad={'50px'}
+                                                small={'50px'}
+                                            />
+                                            <FlexedWrapper
+                                                width={'70%'}
+                                                height={'fit-content'}
+                                                direction={'column'}
+                                                align={'flex-start'}
+                                                justify={'center'}
+                                            >
+                                                <CustomText
+                                                    size={'1.5rem'}
+                                                    padding={'10px 0px 5px 10px'}
+                                                >
+                                                    Kate Adebayo
+                                                </CustomText>
+                                                <CustomText
+                                                    size={'0.8rem'}
+                                                    padding={'0px 0px 10px 10px'}
+                                                    opacity={0.5}
+                                                >
+                                                    CEO Rackkett.co
+                                                </CustomText>
+                                            </FlexedWrapper>
+                                        </FlexedWrapper>
+
+                                         <CustomText
+                                                size={'1rem'}
+                                                small={'0.8rem'}
+                                                opacity={0.4}
+                                                width={'85%'}
+                                                padding={'0px 12.5% 0px 12.5%'}
+                                            >
+                                                "We have employed so many talented here, can feel so amazed about how many talents are right on this platform my best platform for hiring".
+                                            </CustomText>
+                                    </FlexedWrapper>
+                                </LastCardWrapper>
+                            }
+                        </>
                     )}
                 </AboutWriteGrid>
 
